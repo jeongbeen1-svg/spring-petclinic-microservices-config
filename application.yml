@@ -100,6 +100,10 @@ spring:
     url: url: jdbc:mysql://10.1.2.4:3306/petclinic?allowPublicKeyRetrieval=true&useSSL=false
     username: adminuser
     password: asdf1234!
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
   sql:
     init:
       schema-locations: classpath*:db/mysql/schema.sql
