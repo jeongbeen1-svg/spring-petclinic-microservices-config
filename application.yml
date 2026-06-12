@@ -90,22 +90,3 @@ management:
     export:
       zipkin:
         endpoint: "http://tracing-server:9411/api/v2/spans"
-
----
-spring:
-  config:
-    activate:
-      on-profile: mysql
-  datasource:
-    url: url: jdbc:mysql://10.1.2.4:3306/petclinic?allowPublicKeyRetrieval=true&useSSL=false
-    username: adminuser
-    password: asdf1234!
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
-  sql:
-    init:
-      schema-locations: classpath*:db/mysql/schema.sql
-      data-locations: classpath*:db/mysql/data.sql
-      mode: ALWAYS
